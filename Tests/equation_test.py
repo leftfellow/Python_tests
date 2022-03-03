@@ -6,7 +6,7 @@ class EquationTest(unittest.TestCase):
     def setUp(self) -> None:
         pass
 
-    def з(self):
+    def test_discriminant_equal_zero(self):
         self.assertEqual(main.solve_quadratic_equation(2, 4, 2), -1)
 
     def test_a_equal_zero(self):
