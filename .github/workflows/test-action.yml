@@ -1,0 +1,12 @@
+name: CI/CD GitHub Actions
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: pip install --user cpp-coveralls
+      - run: ./Tests/equation_test.py
+
+      - name: Coveralls
+        run: coveralls -t ${{ secrets.coveralls_token }} --root . -E ".*external.*" -E ".*tests.*"
