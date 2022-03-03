@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: pip install --user cpp-coveralls
-      - run: python3 ./Tests/equation_test
+      - run: python3 ./Tests/equation_test.py
 
       - name: Coveralls
         run: coveralls -t ${{ secrets.coveralls_token }} --root . -E ".*external.*" -E ".*tests.*"
