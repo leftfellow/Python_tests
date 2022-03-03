@@ -1,5 +1,5 @@
 import unittest
-from ..app import main
+import main
 
 
 class EquationTest(unittest.TestCase):
