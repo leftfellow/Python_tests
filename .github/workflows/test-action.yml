@@ -5,8 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: python3 import unittest
       - run: pip install --user cpp-coveralls
       - run: python3 ./equation_test.py
 
       - name: Coveralls
-        run: coveralls -t ${{ secrets.coveralls_token }} --root . -E ".*external.*" -E ".*tests.*"
+        run: coveralls -t ${{ secrets.coveralls_token }} --root . -E ".*equation_test.*""
