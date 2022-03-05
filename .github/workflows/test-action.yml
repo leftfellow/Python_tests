@@ -9,4 +9,4 @@ jobs:
       - run: python3 ./equation_test.py
 
       - name: Coveralls
-        run: coveralls -t ${{ secrets.coveralls_token }} --root . -E ".*equation_test.*"
+        run: coveralls -t ${{ secrets.coveralls_token }} --root . -E ".*equation_test.py"
