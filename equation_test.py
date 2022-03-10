@@ -3,6 +3,7 @@ import main
 
 
 class EquationTest(unittest.TestCase):
+
     def setUp(self) -> None:
         pass
 
