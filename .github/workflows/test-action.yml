@@ -12,14 +12,7 @@ jobs:
       - name: Coveralls
         run: COVERALLS_REPO_TOKEN=${{ secrets.coveralls_token }} coveralls
 
-name: Build
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    types: [opened, synchronize, reopened]
-jobs:
+
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
