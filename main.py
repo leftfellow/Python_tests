@@ -2,11 +2,15 @@ import math
 
 
 def solve_quadratic_equation(a, b, c):
-    if a == 0:
-        return None
     a = float(a)
     b = float(b)
     c = float(c)
+
+    if a == 0:
+        try:
+            return -c/b
+        except ZeroDivisionError:
+            return 'Деление на ноль'
 
     discr = b ** 2 - 4 * a * c
 
@@ -18,4 +22,4 @@ def solve_quadratic_equation(a, b, c):
         x = -b / (2 * a)
         return x
     else:
-        return None
+        return 'Дискриминант меньше нуля'
