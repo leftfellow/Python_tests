@@ -1,0 +1,3 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=leftfellow_Python_tests&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=leftfellow_Python_tests)
+[![Coverage Status](https://coveralls.io/repos/github/leftfellow/Python_tests/badge.svg?branch=main)](https://coveralls.io/github/leftfellow/Python_tests?branch=main)
+[![CI/CD GitHub Actions](https://github.com/leftfellow/Python_tests/actions/workflows/test-action.yml/badge.svg)](https://github.com/leftfellow/Python_tests/actions/workflows/test-action.yml)
