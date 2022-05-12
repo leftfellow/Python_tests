@@ -1,19 +1,30 @@
-name: CI/CD GitHub Actions
-on: [push]
-jobs:
-  gtest-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      install:
-        - pip install pytest
-        - pip install pytest-cov
-        - pip install coveralls
-      script:
-        - pytest --cov=./equation_test.py --cov-report xml
+# name: CI/CD GitHub Actions
+# on: [push]
+# jobs:
+#   gtest-tests:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       install:
+#         - pip install pytest
+#         - pip install pytest-cov
+#         - pip install coveralls
+#       script:
+#         - pytest --cov=./equation_test.py --cov-report xml
 
-      - name: Coveralls
-        run: COVERALLS_REPO_TOKEN=${{ secrets.coveralls_token }} coveralls
+#       - name: Coveralls
+#         run: COVERALLS_REPO_TOKEN=${{ secrets.coveralls_token }} coveralls
+language: python
+python:
+  - "3.6"
+install:
+  - pip install pytest
+  - pip install pytest-cov
+  - pip install coveralls
+script:
+  - pytest --cov=YourModule/
+after_success:
+  - coveralls
 
 
   # sonarcloud:
