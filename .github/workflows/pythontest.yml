@@ -5,13 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: python -m pip install --upgrade pip
       - run: pip install pytest
       - run: pip install pytest-cov
       - run: pip install coveralls
+      - run: pip install pytest-xdist
+      - run: pip install pytest-black
       - run: python3 -m pytest --cov=./equation_test.py --cov-report xml
 
-      - name: Coveralls
-        run: COVERALLS_REPO_TOKEN=${{ secrets.coveralls_token }} coveralls
 
 
 

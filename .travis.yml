@@ -1,0 +1,16 @@
+branches:
+  only:
+  - master
+language: python
+python:
+  - "3.9"
+install:
+  - run: pip install pytest
+  - run: pip install pytest-cov
+  - run: pip install coveralls
+  - run: pip install pytest-xdist
+  - run: pip install pytest-black
+script:
+    pytest --black --cov=./equation_test.py --cov-report=term-missing
+after_success:
+  - COVERALLS_REPO_TOKEN=${{serets.coveralls_token}} coveralls
