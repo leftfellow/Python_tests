@@ -5,7 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: pip uninstall python-coveralls
       - run: pip install coveralls
       # - run: pip install python-coveralls
       # - run: pip install pytest-xdist
