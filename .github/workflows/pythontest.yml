@@ -11,7 +11,7 @@ jobs:
       - run: pip install coveralls
       - run: pip install pytest-xdist
       - run: pip install pytest-black
-      - run: python3 -m pytest --cov=./equation_test.py --cov-report xml
+      - run: coverage run -m pytest .
 
 
 

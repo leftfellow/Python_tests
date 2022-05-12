@@ -11,6 +11,6 @@ install:
   - run: pip install pytest-xdist
   - run: pip install pytest-black
 script:
-    pytest --black --cov=./equation_test.py --cov-report=term-missing
+    coverage run -m pytest .
 after_success:
   - COVERALLS_REPO_TOKEN=${{serets.coveralls_token}} coveralls
