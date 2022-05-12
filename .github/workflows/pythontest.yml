@@ -11,7 +11,7 @@ jobs:
       - run: pip install coveralls
       # - run: pip install python-coveralls
       - run: pip install pytest-xdist
-      - run: pip install pytest-black
+      # - run: pip install pytest-black
       - run: coverage run ./equation_test.py
 
       - name: Coveralls
