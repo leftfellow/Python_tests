@@ -9,7 +9,7 @@ jobs:
       # - run: pip install python-coveralls
       # - run: pip install pytest-xdist
       # - run: pip install pytest-black
-      - run: coverage run equation_test.py
+      - run: coverage run ./equation_test.py
 
       - name: Coveralls
         run: COVERALLS_REPO_TOKEN=${{ secrets.coveralls_token }} coveralls
