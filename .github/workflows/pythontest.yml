@@ -6,10 +6,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-          run: |
-            pip install pytest
-            pip install pytest-cov
-            pip install coveralls
+        run: pip install pytest
+        run: pip install pytest-cov
+        run: pip install coveralls
       - name: test
         run: pytest --cov=./equation_test.py --cov-report xml
 
