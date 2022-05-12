@@ -8,11 +8,11 @@ jobs:
       - run: python -m pip install --upgrade pip
       - run: pip install pytest
       - run: pip install pytest-cov
-      # - run: pip install coveralls
-      - run: pip install python-coveralls
+      - run: pip install coveralls
+      # - run: pip install python-coveralls
       - run: pip install pytest-xdist
       - run: pip install pytest-black
-      - run: coverage run -m pytest ./equation_test.py
+      - run: coverage run ./equation_test.py
 
       - name: Coveralls
         run: COVERALLS_REPO_TOKEN=${{ secrets.coveralls_token }} coveralls 
